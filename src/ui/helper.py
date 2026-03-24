@@ -30,7 +30,7 @@ def get_input(
         )
 
     else:
-        raise ValueError("input_type harus 'number' atau 'selectbox'")
+        raise ValueError("input_type must 'number' or 'selectbox'")
     
 def check_api_health(API_URL:str):
     try:
