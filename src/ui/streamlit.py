@@ -319,6 +319,7 @@ with st.container(height=650, border=True):
         }
 
         if st.button('Predict', use_container_width=True, type='primary'):
+            st.session_state.result = None
             # Check if values is none
             if None in payload.values():
                 st.session_state.warning_msg = "Please fill all input first..."
