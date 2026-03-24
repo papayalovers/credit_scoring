@@ -1,0 +1,96 @@
+2026-03-25 04:06:31,796 - pipeline.pipeline - INFO - Starting training pipeline...
+2026-03-25 04:06:31,796 - pipeline.pipeline - INFO - ========== STEP: DATA PREPARATION ==========
+2026-03-25 04:06:31,841 - data.data_preparation - INFO - Data loaded from /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/raw/credit_risk_dataset.csv with shape (32581, 12)
+2026-03-25 04:06:31,880 - data.data_preparation - WARNING - Column 'person_age' has values above maximum of 100
+2026-03-25 04:06:31,880 - data.data_preparation - WARNING - Column 'person_emp_length' has type 'float64', expected 'integer'
+2026-03-25 04:06:31,880 - data.data_preparation - WARNING - Column 'person_emp_length' has values above maximum of 50
+2026-03-25 04:06:31,883 - data.data_preparation - INFO - Column 'person_age' has 5 invalid rows. Indices marked for removal.
+2026-03-25 04:06:31,884 - data.data_preparation - INFO - Column 'person_emp_length' has 2 invalid rows. Indices marked for removal.
+2026-03-25 04:06:31,885 - pipeline.pipeline - INFO - Data after cleaning (32574, 12)
+2026-03-25 04:06:31,894 - pipeline.pipeline - INFO - Shape X_train: (19544, 11), y_train: (19544,)
+2026-03-25 04:06:31,894 - pipeline.pipeline - INFO - Shape X_valid: (6515, 11), y_valid: (6515,)
+2026-03-25 04:06:31,894 - pipeline.pipeline - INFO - Shape X_test: (6515, 11), y_test: (6515,)
+2026-03-25 04:06:31,894 - pipeline.pipeline - INFO - Composition of Data Train, Valid and Test: 60% - 20% - 20%
+2026-03-25 04:06:31,894 - pipeline.pipeline - INFO - All split composition 32574
+2026-03-25 04:06:31,894 - utils.utils - INFO - Serializing data to /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/interim/train.pkl...
+2026-03-25 04:06:31,898 - utils.utils - INFO - Serializing data to /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/interim/valid.pkl...
+2026-03-25 04:06:31,900 - utils.utils - INFO - Serializing data to /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/interim/test.pkl...
+2026-03-25 04:06:31,908 - utils.utils - INFO - Configuration updated: path.train_data = /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/interim/train.pkl
+2026-03-25 04:06:31,912 - utils.utils - INFO - Configuration updated: path.valid_data = /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/interim/valid.pkl
+2026-03-25 04:06:31,915 - utils.utils - INFO - Configuration updated: path.test_data = /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/interim/test.pkl
+2026-03-25 04:06:31,915 - pipeline.pipeline - INFO - Data preparation completed successfully.
+2026-03-25 04:06:31,915 - pipeline.pipeline - INFO - ========== STEP: DATA PREPROCESSING ==========
+2026-03-25 04:06:31,915 - utils.utils - INFO - Deserializing data from /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/interim/train.pkl...
+2026-03-25 04:06:31,918 - utils.utils - INFO - Deserializing data from /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/interim/valid.pkl...
+2026-03-25 04:06:31,919 - utils.utils - INFO - Deserializing data from /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/interim/test.pkl...
+2026-03-25 04:06:31,921 - pipeline.pipeline - INFO - Datasets successfully loaded from disk
+2026-03-25 04:06:31,921 - pipeline.pipeline - INFO - X_train shape: (19544, 11)
+2026-03-25 04:06:31,921 - pipeline.pipeline - INFO - X_valid shape: (6515, 11)
+2026-03-25 04:06:31,921 - pipeline.pipeline - INFO - X_test shape: (6515, 11)
+2026-03-25 04:06:31,921 - features.preprocessing - INFO - Numerical cols: ['person_age', 'person_income', 'person_emp_length', 'loan_amnt', 'loan_int_rate', 'loan_percent_income', 'cb_person_cred_hist_length']
+2026-03-25 04:06:31,921 - features.preprocessing - INFO - Nominal cols: ['person_home_ownership', 'loan_intent']
+2026-03-25 04:06:31,921 - features.preprocessing - INFO - Ordinal cols: ['cb_person_default_on_file', 'loan_grade']
+2026-03-25 04:06:31,921 - features.preprocessing - INFO - Pipeline flow: OHE -> Ordinal -> RobustScaler
+2026-03-25 04:06:31,960 - pipeline.pipeline - INFO - Robust Scaler output shape: (19544, 17)
+2026-03-25 04:06:31,960 - features.preprocessing - INFO - Numerical cols: ['person_age', 'person_income', 'person_emp_length', 'loan_amnt', 'loan_int_rate', 'loan_percent_income', 'cb_person_cred_hist_length']
+2026-03-25 04:06:31,960 - features.preprocessing - INFO - Nominal cols: ['person_home_ownership', 'loan_intent']
+2026-03-25 04:06:31,960 - features.preprocessing - INFO - Ordinal cols: ['cb_person_default_on_file', 'loan_grade']
+2026-03-25 04:06:31,960 - features.preprocessing - INFO - Pipeline flow: OHE -> Ordinal -> Log -> RobustScaler
+2026-03-25 04:06:31,998 - pipeline.pipeline - INFO - Log + Robust output shape: (19544, 17)
+2026-03-25 04:06:31,999 - utils.utils - INFO - Serializing data to /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/processed/train_pipeline.pkl...
+2026-03-25 04:06:32,003 - utils.utils - INFO - Serializing data to /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/processed/valid_pipeline.pkl...
+2026-03-25 04:06:32,008 - utils.utils - INFO - Serializing data to /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/processed/test_pipeline.pkl...
+2026-03-25 04:06:32,018 - utils.utils - INFO - Serializing data to /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/models/rob_prep_pipeline.pkl...
+2026-03-25 04:06:32,020 - utils.utils - INFO - Serializing data to /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/models/logrob_prep_pipeline.pkl...
+2026-03-25 04:06:32,025 - utils.utils - INFO - Configuration updated: path.train_data_processed_pipe = /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/processed/train_pipeline.pkl
+2026-03-25 04:06:32,028 - utils.utils - INFO - Configuration updated: path.valid_data_processed_pipe = /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/processed/valid_pipeline.pkl
+2026-03-25 04:06:32,031 - utils.utils - INFO - Configuration updated: path.test_data_processed_pipe = /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/processed/test_pipeline.pkl
+2026-03-25 04:06:32,034 - utils.utils - INFO - Configuration updated: path.rob_preprocessing = /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/models/rob_prep_pipeline.pkl
+2026-03-25 04:06:32,038 - utils.utils - INFO - Configuration updated: path.logrob_preprocessing = /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/models/logrob_prep_pipeline.pkl
+2026-03-25 04:06:32,038 - pipeline.pipeline - INFO - Processed datasets successfully saved
+2026-03-25 04:06:32,038 - pipeline.pipeline - INFO - Data preprocessing completed successfully.
+2026-03-25 04:06:32,038 - pipeline.pipeline - INFO - ========== STEP: TRAINING MODEL ==========
+2026-03-25 04:06:32,038 - utils.utils - INFO - Deserializing data from /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/processed/train_pipeline.pkl...
+2026-03-25 04:06:32,041 - modeling.trainer_model - INFO - Training: Robust Scaler | SMOTE | RandomForestClassifier
+2026-03-25 04:07:48,025 - modeling.trainer_model - INFO - [RESULT] Robust Scaler | SMOTE | RandomForestClassifier Score: 0.7536
+2026-03-25 04:07:48,026 - modeling.trainer_model - INFO - Training: Robust Scaler | SMOTE | KNeighborsClassifier
+2026-03-25 04:07:59,089 - modeling.trainer_model - INFO - [RESULT] Robust Scaler | SMOTE | KNeighborsClassifier Score: 0.7858
+2026-03-25 04:07:59,091 - modeling.trainer_model - INFO - Training: Robust Scaler | SMOTE | XGBClassifier
+2026-03-25 04:08:10,869 - modeling.trainer_model - INFO - [RESULT] Robust Scaler | SMOTE | XGBClassifier Score: 0.7534
+2026-03-25 04:08:10,870 - modeling.trainer_model - INFO - Training: Robust Scaler | SMOTEENN | RandomForestClassifier
+2026-03-25 04:09:33,991 - modeling.trainer_model - INFO - [RESULT] Robust Scaler | SMOTEENN | RandomForestClassifier Score: 0.7998
+2026-03-25 04:09:33,993 - modeling.trainer_model - INFO - Training: Robust Scaler | SMOTEENN | KNeighborsClassifier
+2026-03-25 04:10:14,336 - modeling.trainer_model - INFO - [RESULT] Robust Scaler | SMOTEENN | KNeighborsClassifier Score: 0.8299
+2026-03-25 04:10:14,338 - modeling.trainer_model - INFO - Training: Robust Scaler | SMOTEENN | XGBClassifier
+2026-03-25 04:10:54,554 - modeling.trainer_model - INFO - [RESULT] Robust Scaler | SMOTEENN | XGBClassifier Score: 0.8031
+2026-03-25 04:10:54,556 - modeling.trainer_model - INFO - Training: Log + Robust Scaler | SMOTE | RandomForestClassifier
+2026-03-25 04:12:02,384 - modeling.trainer_model - INFO - [RESULT] Log + Robust Scaler | SMOTE | RandomForestClassifier Score: 0.7550
+2026-03-25 04:12:02,385 - modeling.trainer_model - INFO - Training: Log + Robust Scaler | SMOTE | KNeighborsClassifier
+2026-03-25 04:12:15,394 - modeling.trainer_model - INFO - [RESULT] Log + Robust Scaler | SMOTE | KNeighborsClassifier Score: 0.8045
+2026-03-25 04:12:15,397 - modeling.trainer_model - INFO - Training: Log + Robust Scaler | SMOTE | XGBClassifier
+2026-03-25 04:12:27,327 - modeling.trainer_model - INFO - [RESULT] Log + Robust Scaler | SMOTE | XGBClassifier Score: 0.7545
+2026-03-25 04:12:27,327 - modeling.trainer_model - INFO - Training: Log + Robust Scaler | SMOTEENN | RandomForestClassifier
+2026-03-25 04:13:32,786 - modeling.trainer_model - INFO - [RESULT] Log + Robust Scaler | SMOTEENN | RandomForestClassifier Score: 0.7902
+2026-03-25 04:13:32,789 - modeling.trainer_model - INFO - Training: Log + Robust Scaler | SMOTEENN | KNeighborsClassifier
+2026-03-25 04:14:12,058 - modeling.trainer_model - INFO - [RESULT] Log + Robust Scaler | SMOTEENN | KNeighborsClassifier Score: 0.8385
+2026-03-25 04:14:12,059 - modeling.trainer_model - INFO - Training: Log + Robust Scaler | SMOTEENN | XGBClassifier
+2026-03-25 04:14:49,046 - modeling.trainer_model - INFO - [RESULT] Log + Robust Scaler | SMOTEENN | XGBClassifier Score: 0.7991
+2026-03-25 04:14:49,086 - modeling.trainer_model - INFO - Best Model Found:
+2026-03-25 04:14:49,086 - modeling.trainer_model - INFO - Preprocessing: Log + Robust Scaler
+2026-03-25 04:14:49,087 - modeling.trainer_model - INFO - Model: KNeighborsClassifier
+2026-03-25 04:14:49,087 - modeling.trainer_model - INFO - Resampler: SMOTEENN
+2026-03-25 04:14:49,087 - modeling.trainer_model - INFO - recall_score: 0.8385
+2026-03-25 04:14:49,089 - modeling.trainer_model - INFO - Pipeline successfully rebuilt from best log
+2026-03-25 04:14:49,091 - modeling.trainer_model - INFO - Fitting best model using preprocessing: Log + Robust Scaler
+2026-03-25 04:14:50,243 - modeling.trainer_model - INFO - Best model successfully trained
+2026-03-25 04:14:50,247 - utils.utils - INFO - Serializing data to /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/models/best_model.pkl...
+2026-03-25 04:14:50,262 - utils.utils - INFO - Configuration updated: path.best_model = /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/models/best_model.pkl
+2026-03-25 04:14:50,267 - utils.utils - INFO - Configuration updated: best_preprocessing = Log + Robust Scaler
+2026-03-25 04:14:50,267 - pipeline.pipeline - INFO - Training model Completed Successfully
+2026-03-25 04:14:50,267 - pipeline.pipeline - INFO - ========== STEP: EVALUATION MODEL ==========
+2026-03-25 04:14:50,268 - utils.utils - INFO - Deserializing data from /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/models/best_model.pkl...
+2026-03-25 04:14:50,277 - utils.utils - INFO - Deserializing data from /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/processed/valid_pipeline.pkl...
+2026-03-25 04:14:50,282 - utils.utils - INFO - Deserializing data from /Users/apa/Documents/DATAKU/BootCamp/Pacmann/ML_API/mentoring/new_credit_scoring/data/processed/test_pipeline.pkl...
+2026-03-25 04:14:51,106 - utils.utils - INFO - Configuration updated: best_threshold = 0.49
+2026-03-25 04:14:51,110 - utils.utils - INFO - Configuration updated: test_set_eval_result = {'TP': 1177, 'FP': 1218, 'FN': 230, 'TN': 3890, 'accuracy': 0.777743668457406, 'precision': 0.49144050104384135, 'recall': 0.8365316275764036, 'f1_score': 0.6191478169384534}
+2026-03-25 04:14:51,110 - pipeline.pipeline - INFO - Evaluation step completed successfully - result: {'TP': 1177, 'FP': 1218, 'FN': 230, 'TN': 3890, 'accuracy': 0.777743668457406, 'precision': 0.49144050104384135, 'recall': 0.8365316275764036, 'f1_score': 0.6191478169384534}.

@@ -1,0 +1,560 @@
+[
+    [
+        {
+            "timestamp": "2026-03-24 02:31:22",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "RandomForestClassifier",
+            "recall_score": 0.7536149575822855,
+            "params": {
+                "n_estimators": 294,
+                "max_depth": 5,
+                "min_samples_split": 9,
+                "min_samples_leaf": 10,
+                "max_features": "sqrt"
+            },
+            "training_time": 44.100106954574585
+        },
+        {
+            "timestamp": "2026-03-24 02:31:31",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "KNeighborsClassifier",
+            "recall_score": 0.785813525253432,
+            "params": {
+                "n_neighbors": 25,
+                "weights": "distance",
+                "metric": "euclidean"
+            },
+            "training_time": 8.953572034835815
+        },
+        {
+            "timestamp": "2026-03-24 02:31:39",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "XGBClassifier",
+            "recall_score": 0.7533821293447898,
+            "params": {
+                "n_estimators": 145,
+                "max_depth": 3,
+                "learning_rate": 0.05423197245433309,
+                "subsample": 0.9990851371537367,
+                "colsample_bytree": 0.7935877653929082,
+                "gamma": 2.17044432808113,
+                "reg_alpha": 4.9419257325931305,
+                "reg_lambda": 3.72321427418414
+            },
+            "training_time": 8.144867897033691
+        },
+        {
+            "timestamp": "2026-03-24 02:32:34",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "RandomForestClassifier",
+            "recall_score": 0.7998125950284644,
+            "params": {
+                "n_estimators": 294,
+                "max_depth": 5,
+                "min_samples_split": 5,
+                "min_samples_leaf": 10,
+                "max_features": "sqrt"
+            },
+            "training_time": 55.548442125320435
+        },
+        {
+            "timestamp": "2026-03-24 02:33:05",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "KNeighborsClassifier",
+            "recall_score": 0.8299102686500586,
+            "params": {
+                "n_neighbors": 24,
+                "weights": "distance",
+                "metric": "euclidean"
+            },
+            "training_time": 30.12986397743225
+        },
+        {
+            "timestamp": "2026-03-24 02:33:34",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "XGBClassifier",
+            "recall_score": 0.8030773582698905,
+            "params": {
+                "n_estimators": 140,
+                "max_depth": 6,
+                "learning_rate": 0.01804640049485537,
+                "subsample": 0.8706300810728903,
+                "colsample_bytree": 0.6290740943872529,
+                "gamma": 3.1845524726784418,
+                "reg_alpha": 3.8920169658429113,
+                "reg_lambda": 2.904643828725665
+            },
+            "training_time": 29.554173946380615
+        },
+        {
+            "timestamp": "2026-03-24 02:34:14",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "RandomForestClassifier",
+            "recall_score": 0.7550149189589096,
+            "params": {
+                "n_estimators": 299,
+                "max_depth": 5,
+                "min_samples_split": 5,
+                "min_samples_leaf": 4,
+                "max_features": "sqrt"
+            },
+            "training_time": 39.94075798988342
+        },
+        {
+            "timestamp": "2026-03-24 02:34:23",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "KNeighborsClassifier",
+            "recall_score": 0.8044803115981646,
+            "params": {
+                "n_neighbors": 25,
+                "weights": "distance",
+                "metric": "euclidean"
+            },
+            "training_time": 8.739941120147705
+        },
+        {
+            "timestamp": "2026-03-24 02:34:31",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "XGBClassifier",
+            "recall_score": 0.7545481745015,
+            "params": {
+                "n_estimators": 145,
+                "max_depth": 3,
+                "learning_rate": 0.05423197245433309,
+                "subsample": 0.9990851371537367,
+                "colsample_bytree": 0.7935877653929082,
+                "gamma": 2.17044432808113,
+                "reg_alpha": 4.9419257325931305,
+                "reg_lambda": 3.72321427418414
+            },
+            "training_time": 8.083228349685669
+        },
+        {
+            "timestamp": "2026-03-24 02:35:23",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "RandomForestClassifier",
+            "recall_score": 0.7902462376208,
+            "params": {
+                "n_estimators": 142,
+                "max_depth": 23,
+                "min_samples_split": 5,
+                "min_samples_leaf": 10,
+                "max_features": "log2"
+            },
+            "training_time": 51.98091530799866
+        },
+        {
+            "timestamp": "2026-03-24 02:35:54",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "KNeighborsClassifier",
+            "recall_score": 0.8385434091385082,
+            "params": {
+                "n_neighbors": 25,
+                "weights": "distance",
+                "metric": "minkowski"
+            },
+            "training_time": 30.661645889282227
+        },
+        {
+            "timestamp": "2026-03-24 02:36:24",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "XGBClassifier",
+            "recall_score": 0.79911247834235,
+            "params": {
+                "n_estimators": 156,
+                "max_depth": 7,
+                "learning_rate": 0.016149614799999188,
+                "subsample": 0.9208787923016158,
+                "colsample_bytree": 0.6298202574719083,
+                "gamma": 4.9344346830025865,
+                "reg_alpha": 3.861223846483287,
+                "reg_lambda": 0.993578407670862
+            },
+            "training_time": 30.80976700782776
+        }
+    ],
+    [
+        {
+            "timestamp": "2026-03-24 11:40:19",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "RandomForestClassifier",
+            "recall_score": 0.7536149575822855,
+            "params": {
+                "n_estimators": 294,
+                "max_depth": 5,
+                "min_samples_split": 9,
+                "min_samples_leaf": 10,
+                "max_features": "sqrt"
+            },
+            "training_time": 44.018880128860474
+        },
+        {
+            "timestamp": "2026-03-24 11:40:28",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "KNeighborsClassifier",
+            "recall_score": 0.785813525253432,
+            "params": {
+                "n_neighbors": 25,
+                "weights": "distance",
+                "metric": "euclidean"
+            },
+            "training_time": 8.858533143997192
+        },
+        {
+            "timestamp": "2026-03-24 11:40:36",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "XGBClassifier",
+            "recall_score": 0.7533821293447898,
+            "params": {
+                "n_estimators": 145,
+                "max_depth": 3,
+                "learning_rate": 0.05423197245433309,
+                "subsample": 0.9990851371537367,
+                "colsample_bytree": 0.7935877653929082,
+                "gamma": 2.17044432808113,
+                "reg_alpha": 4.9419257325931305,
+                "reg_lambda": 3.72321427418414
+            },
+            "training_time": 8.234580993652344
+        },
+        {
+            "timestamp": "2026-03-24 11:41:32",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "RandomForestClassifier",
+            "recall_score": 0.7998125950284644,
+            "params": {
+                "n_estimators": 294,
+                "max_depth": 5,
+                "min_samples_split": 5,
+                "min_samples_leaf": 10,
+                "max_features": "sqrt"
+            },
+            "training_time": 55.51924800872803
+        },
+        {
+            "timestamp": "2026-03-24 11:42:02",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "KNeighborsClassifier",
+            "recall_score": 0.8299102686500586,
+            "params": {
+                "n_neighbors": 24,
+                "weights": "distance",
+                "metric": "euclidean"
+            },
+            "training_time": 30.119029998779297
+        },
+        {
+            "timestamp": "2026-03-24 11:42:32",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "XGBClassifier",
+            "recall_score": 0.8030773582698905,
+            "params": {
+                "n_estimators": 140,
+                "max_depth": 6,
+                "learning_rate": 0.01804640049485537,
+                "subsample": 0.8706300810728903,
+                "colsample_bytree": 0.6290740943872529,
+                "gamma": 3.1845524726784418,
+                "reg_alpha": 3.8920169658429113,
+                "reg_lambda": 2.904643828725665
+            },
+            "training_time": 29.581298112869263
+        },
+        {
+            "timestamp": "2026-03-24 11:43:12",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "RandomForestClassifier",
+            "recall_score": 0.7550149189589096,
+            "params": {
+                "n_estimators": 299,
+                "max_depth": 5,
+                "min_samples_split": 5,
+                "min_samples_leaf": 4,
+                "max_features": "sqrt"
+            },
+            "training_time": 39.94613480567932
+        },
+        {
+            "timestamp": "2026-03-24 11:43:20",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "KNeighborsClassifier",
+            "recall_score": 0.8044803115981646,
+            "params": {
+                "n_neighbors": 25,
+                "weights": "distance",
+                "metric": "euclidean"
+            },
+            "training_time": 8.736528158187866
+        },
+        {
+            "timestamp": "2026-03-24 11:43:29",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "XGBClassifier",
+            "recall_score": 0.7545481745015,
+            "params": {
+                "n_estimators": 145,
+                "max_depth": 3,
+                "learning_rate": 0.05423197245433309,
+                "subsample": 0.9990851371537367,
+                "colsample_bytree": 0.7935877653929082,
+                "gamma": 2.17044432808113,
+                "reg_alpha": 4.9419257325931305,
+                "reg_lambda": 3.72321427418414
+            },
+            "training_time": 8.440217971801758
+        },
+        {
+            "timestamp": "2026-03-24 11:44:21",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "RandomForestClassifier",
+            "recall_score": 0.7902462376208,
+            "params": {
+                "n_estimators": 142,
+                "max_depth": 23,
+                "min_samples_split": 5,
+                "min_samples_leaf": 10,
+                "max_features": "log2"
+            },
+            "training_time": 52.05796504020691
+        },
+        {
+            "timestamp": "2026-03-24 11:44:51",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "KNeighborsClassifier",
+            "recall_score": 0.8385434091385082,
+            "params": {
+                "n_neighbors": 25,
+                "weights": "distance",
+                "metric": "minkowski"
+            },
+            "training_time": 30.28073215484619
+        },
+        {
+            "timestamp": "2026-03-24 11:45:21",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "XGBClassifier",
+            "recall_score": 0.79911247834235,
+            "params": {
+                "n_estimators": 156,
+                "max_depth": 7,
+                "learning_rate": 0.016149614799999188,
+                "subsample": 0.9208787923016158,
+                "colsample_bytree": 0.6298202574719083,
+                "gamma": 4.9344346830025865,
+                "reg_alpha": 3.861223846483287,
+                "reg_lambda": 0.993578407670862
+            },
+            "training_time": 30.05379009246826
+        }
+    ],
+    [
+        {
+            "timestamp": "2026-03-25 04:07:48",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "RandomForestClassifier",
+            "recall_score": 0.7536149575822855,
+            "params": {
+                "n_estimators": 294,
+                "max_depth": 5,
+                "min_samples_split": 9,
+                "min_samples_leaf": 10,
+                "max_features": "sqrt"
+            },
+            "training_time": 75.97969889640808
+        },
+        {
+            "timestamp": "2026-03-25 04:07:59",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "KNeighborsClassifier",
+            "recall_score": 0.785813525253432,
+            "params": {
+                "n_neighbors": 25,
+                "weights": "distance",
+                "metric": "euclidean"
+            },
+            "training_time": 11.058756113052368
+        },
+        {
+            "timestamp": "2026-03-25 04:08:10",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "XGBClassifier",
+            "recall_score": 0.7533821293447898,
+            "params": {
+                "n_estimators": 145,
+                "max_depth": 3,
+                "learning_rate": 0.05423197245433309,
+                "subsample": 0.9990851371537367,
+                "colsample_bytree": 0.7935877653929082,
+                "gamma": 2.17044432808113,
+                "reg_alpha": 4.9419257325931305,
+                "reg_lambda": 3.72321427418414
+            },
+            "training_time": 11.772025108337402
+        },
+        {
+            "timestamp": "2026-03-25 04:09:33",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "RandomForestClassifier",
+            "recall_score": 0.7998125950284644,
+            "params": {
+                "n_estimators": 294,
+                "max_depth": 5,
+                "min_samples_split": 5,
+                "min_samples_leaf": 10,
+                "max_features": "sqrt"
+            },
+            "training_time": 83.11474108695984
+        },
+        {
+            "timestamp": "2026-03-25 04:10:14",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "KNeighborsClassifier",
+            "recall_score": 0.8299102686500586,
+            "params": {
+                "n_neighbors": 24,
+                "weights": "distance",
+                "metric": "euclidean"
+            },
+            "training_time": 40.33991193771362
+        },
+        {
+            "timestamp": "2026-03-25 04:10:54",
+            "preprocessing": "Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "XGBClassifier",
+            "recall_score": 0.8030773582698905,
+            "params": {
+                "n_estimators": 140,
+                "max_depth": 6,
+                "learning_rate": 0.01804640049485537,
+                "subsample": 0.8706300810728903,
+                "colsample_bytree": 0.6290740943872529,
+                "gamma": 3.1845524726784418,
+                "reg_alpha": 3.8920169658429113,
+                "reg_lambda": 2.904643828725665
+            },
+            "training_time": 40.20903778076172
+        },
+        {
+            "timestamp": "2026-03-25 04:12:02",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "RandomForestClassifier",
+            "recall_score": 0.7550149189589096,
+            "params": {
+                "n_estimators": 299,
+                "max_depth": 5,
+                "min_samples_split": 5,
+                "min_samples_leaf": 4,
+                "max_features": "sqrt"
+            },
+            "training_time": 67.82054710388184
+        },
+        {
+            "timestamp": "2026-03-25 04:12:15",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "KNeighborsClassifier",
+            "recall_score": 0.8044803115981646,
+            "params": {
+                "n_neighbors": 25,
+                "weights": "distance",
+                "metric": "euclidean"
+            },
+            "training_time": 13.005228042602539
+        },
+        {
+            "timestamp": "2026-03-25 04:12:27",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTE",
+            "model": "XGBClassifier",
+            "recall_score": 0.7545481745015,
+            "params": {
+                "n_estimators": 145,
+                "max_depth": 3,
+                "learning_rate": 0.05423197245433309,
+                "subsample": 0.9990851371537367,
+                "colsample_bytree": 0.7935877653929082,
+                "gamma": 2.17044432808113,
+                "reg_alpha": 4.9419257325931305,
+                "reg_lambda": 3.72321427418414
+            },
+            "training_time": 11.926398038864136
+        },
+        {
+            "timestamp": "2026-03-25 04:13:32",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "RandomForestClassifier",
+            "recall_score": 0.7902462376208,
+            "params": {
+                "n_estimators": 142,
+                "max_depth": 23,
+                "min_samples_split": 5,
+                "min_samples_leaf": 10,
+                "max_features": "log2"
+            },
+            "training_time": 65.4547929763794
+        },
+        {
+            "timestamp": "2026-03-25 04:14:12",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "KNeighborsClassifier",
+            "recall_score": 0.8385434091385082,
+            "params": {
+                "n_neighbors": 25,
+                "weights": "distance",
+                "metric": "minkowski"
+            },
+            "training_time": 39.26369309425354
+        },
+        {
+            "timestamp": "2026-03-25 04:14:49",
+            "preprocessing": "Log + Robust Scaler",
+            "resampler": "SMOTEENN",
+            "model": "XGBClassifier",
+            "recall_score": 0.79911247834235,
+            "params": {
+                "n_estimators": 156,
+                "max_depth": 7,
+                "learning_rate": 0.016149614799999188,
+                "subsample": 0.9208787923016158,
+                "colsample_bytree": 0.6298202574719083,
+                "gamma": 4.9344346830025865,
+                "reg_alpha": 3.861223846483287,
+                "reg_lambda": 0.993578407670862
+            },
+            "training_time": 36.97817397117615
+        }
+    ]
+]

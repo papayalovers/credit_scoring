@@ -1,0 +1,65 @@
+.center-box {
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+
+    background-image: url("https://static.streamlit.io/examples/owl.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.center-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.center-box > * {
+    position: relative;
+    z-index: 2;
+}
+
+.clock {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+
+.date {
+    color: #e5e5e5;
+}
+
+.img_card {
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 15px;
+    position: relative;
+}
+
+.img_card::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    right: 5px;
+    background: rgba(0, 123, 255, 0.15); 
+    border-radius: 80% 40% 90%;
+    z-index: 0;
+}
+
+.img_card img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
