@@ -337,8 +337,6 @@ with st.container(height=650, border=True):
         if response is not None:
             if response.status_code == 200:
                 result = response.json()
-                st.success("Prediction Success")
-                st.write("### Result")
                 st.session_state.result = result
             else:
                 st.error(f"Error: {response.text}")
