@@ -128,7 +128,7 @@ with top_left_:
         df['quantile'] = pd.qcut(df['loan_percent_income'], 5)
         data_df = df.groupby('quantile')['loan_status'].mean().reset_index()
 
-        # convert ke string biar readable
+        # convert to string
         data_df['quantile'] = [
             f"{interval.left:.2f} - {interval.right:.2f}"
             for interval in data_df['quantile']
