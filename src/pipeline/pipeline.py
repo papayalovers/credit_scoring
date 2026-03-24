@@ -254,7 +254,7 @@ def run_training_pipeline(
             # Load resampler factory
             update(step_name, "Load resampler factory...", 5)
             resamplers = get_resampler()
-            # Estimate total training combinations (biar progress enak)
+            # Estimate total training combinations
             n_prep = len(data_train)
             n_res = len(resamplers)
             temp_models = create_model_object()
